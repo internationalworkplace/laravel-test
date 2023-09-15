@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Cosmology\ActivityListController;
+use App\Http\Controllers\Cosmology\ActivityController;
+use App\Http\Controllers\CosmologyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('cosmology')->group(function () {
+    Route::get('activities', ActivityListController::class)
+        ->name('cosmology.activities');
+
+    Route::get('activity/{id}', ActivityController::class)
+        ->name('cosmology.activities.by.organisation');
 });
