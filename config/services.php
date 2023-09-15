@@ -31,5 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    // TODO: Add the arcsecond service to the services array.
+    'arcsecond' => [
+        'url' => env('ARCSECOND_API_URL', 'https://api.arcsecond.io/'),
+    ],
 ];

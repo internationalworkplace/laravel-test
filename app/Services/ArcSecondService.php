@@ -14,7 +14,7 @@ class ArcSecondService implements CosmologyInterface
         protected string $apiKey
     ) {
         $this->httpClient = new HttpClient([
-            'base_uri' => $uri,
+            'base_uri' => config('services.arcsecond.base_uri'),
         ]);
     }
 }
