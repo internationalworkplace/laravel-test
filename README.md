@@ -9,4 +9,15 @@
 
 ## Laravel API Test
 
-This is a simple API test using Laravel 10 requests data from arcsecond.
+This is a simple API test using Laravel 10 requests data from [arcsecond.io](https://api.arcsecond.io).
+
+Please refer to the [OPEN AI](https://api.arcsecond.io/schema/swagger) schema for the endpoints you will need
+to get this test working.
+
+#### The Goal
+
+The goal of this test is to create a simple API that will provide two GET endpoints:
+1. Fetch all cosmology activities.
+2. Fetch all cosmology activities for a given ID.
+
+Please use Laravel best practices to show how you could achieve this.
